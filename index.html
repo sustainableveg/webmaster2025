@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Debugging</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+
+    <style type="text/css">
+      body {
+        background-color:  #ede8d0;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        height: 95vh;
+        width: 95%;
+        margin: 20px auto;
+      }
+      .fullscreen {
+        background-color: #ede8d0;
+      }
+      .examples {
+        position: relative;
+      }
+      .examples div {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        padding-top: 10px;
+        font-size: 20px;
+      }
+      .examples a {
+        color: #ccc;
+        text-decoration: none;
+        padding: 0 10px;
+      }
+      .examples a:hover {
+        color: #fff;
+      }
+    </style>
+
+    <div class="examples">
+      <div>
+        <a href="example2.html"></a> 
+      </div>
+    </div>
+
+    <div class="container" id="container">
+
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/html2canvas.min.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/pdf.min.js"></script>
+
+    <script src="js/3dflipbook.min.js"></script>
+    <script type="text/javascript">
+
+
+      // Sample 1 CSS Layer {
+      function theKingIsBlackPageCallback(n) {
+        return {
+          type: 'image',
+          src: 'books/image/theKingIsBlack/'+(n+1)+'.jpg',
+          interactive: false
+        };
+      }
+      console.log($('#container'));
+      $('#container').FlipBook({
+        'pdf':'books/pdf/WebmasterRegionals2025.pdf'
+      });
+
+
+      
+
+    </script>
+
+  </body>
+</html>

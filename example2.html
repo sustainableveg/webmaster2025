@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Garden</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+
+    <style type="text/css">
+      body {
+        background-color: #ede8d0;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        height: 70vh;
+        width: 80%;
+        margin: 20px auto;
+      }
+      .fullscreen {
+        background-color:  #ede8d0;
+      }
+    </style>
+
+    <div class="container" id="container1">
+
+    </div>
+
+    <div class="container" id="container2">
+
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/html2canvas.min.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/pdf.min.js"></script>
+    <script src="js/3dflipbook.min.js"></script>
+
+    <script type="text/javascript">
+
+      var template = {
+        html: 'templates/default-book-view.html',
+        links: [{
+          rel: 'stylesheet',
+          href: 'css/font-awesome.min.css'
+        }],
+        styles: [
+          'css/short-black-book-view.css'
+        ],
+        script: 'js/default-book-view.js'
+      };
+
+      // Book 1 {
+      $('#container1').FlipBook({
+        pdf: 'books/pdf/WebmasterRegionals2025.pdf',
+        template: template
+      });
+      // }
+
+
+    </script>
+
+  </body>
+</html>
